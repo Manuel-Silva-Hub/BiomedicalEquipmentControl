@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\microservice_authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,42 +46,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T02:53:43.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwEsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T02:51:26.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-21T02:39:46.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T02:39:46.184Z"
             },
             {
               "$type": "Document",
