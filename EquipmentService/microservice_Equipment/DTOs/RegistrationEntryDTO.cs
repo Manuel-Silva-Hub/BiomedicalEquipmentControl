@@ -17,6 +17,10 @@ namespace microservice_Equipment.DTOs
         [Required]
         public string LoginUser { get; set; }
 
+        [Required]
+        public DateTime EntryDate { get; set; } = DateTime.Now;
+
         public bool IsFrequent { get; set; } = false;
+        public bool IsInside { get; set; } = true;
     }
 }
