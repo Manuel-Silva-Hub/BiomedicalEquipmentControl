@@ -11,6 +11,7 @@ namespace microservice_Equipment.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
+    //CAMBIOS UNO
     public class RegistryController : ControllerBase
     {
         private readonly RegistroContext _context;
