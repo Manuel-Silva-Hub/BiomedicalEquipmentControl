@@ -1,45 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\",
+  "WorkspaceRootPath": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\data\\registrocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:data\\registrocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\mappings\\registryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:mappings\\registryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\models\\equipmentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:models\\equipmentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\microservice_equipment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:microservice_equipment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\dtos\\recordresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:dtos\\recordresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\dtos\\recordegressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\data\\registrocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:data\\registrocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\mappings\\registryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:mappings\\registryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\models\\equipmentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:models\\equipmentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\microservice_equipment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:microservice_equipment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\dtos\\recordresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:dtos\\recordresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\dtos\\recordegressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:dtos\\recordegressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\dtos\\registrationentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\dtos\\registrationentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:dtos\\registrationentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,8 +54,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -62,37 +70,75 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-24T14:22:54.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAcwEQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T14:03:24.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-05T23:09:10.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RegistryController.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegistryController.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
               "RelativeToolTip": "Controllers\\RegistryController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwDoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvw0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T14:49:36.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "RegistryProfile.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Mappings\\RegistryProfile.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Mappings\\RegistryProfile.cs",
               "RelativeDocumentMoniker": "Mappings\\RegistryProfile.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Mappings\\RegistryProfile.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Mappings\\RegistryProfile.cs",
               "RelativeToolTip": "Mappings\\RegistryProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T14:53:14.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T14:53:14.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "RecordResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordResponseDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\RecordResponseDTO.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordResponseDTO.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordResponseDTO.cs",
               "RelativeToolTip": "DTOs\\RecordResponseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -100,11 +146,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RecordEgressDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordEgressDTO.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordEgressDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\RecordEgressDTO.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordEgressDTO.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RecordEgressDTO.cs",
               "RelativeToolTip": "DTOs\\RecordEgressDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -112,11 +158,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RegistrationEntryDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RegistrationEntryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RegistrationEntryDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\RegistrationEntryDTO.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RegistrationEntryDTO.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\DTOs\\RegistrationEntryDTO.cs",
               "RelativeToolTip": "DTOs\\RegistrationEntryDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -124,67 +170,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-24T14:22:54.062Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswEwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T14:03:24.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "RegistroContext.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
               "RelativeDocumentMoniker": "Data\\RegistroContext.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
               "RelativeToolTip": "Data\\RegistroContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:55:04.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:55:04.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EquipmentRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
               "RelativeDocumentMoniker": "Models\\EquipmentRegistration.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
               "RelativeToolTip": "Models\\EquipmentRegistration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:53:21.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:53:21.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "microservice_Equipment.csproj",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
               "RelativeDocumentMoniker": "microservice_Equipment.csproj",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
               "RelativeToolTip": "microservice_Equipment.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-24T13:52:01.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:52:01.08Z"
             }
           ]
         }

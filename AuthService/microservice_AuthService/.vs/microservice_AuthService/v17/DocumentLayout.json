@@ -1,30 +1,93 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\",
+  "WorkspaceRootPath": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Data\\seedData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Mappings\\InventarioProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioCreateDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioResponseDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Controllers\\EquiposController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioUpdateDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Models\\Equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Data\\InventarioContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\microservice_authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:microservice_authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\alexis\\documents\\universidad\\vii ciclo - colombia\\desarrollo-microservicios\\proyecto_integrador\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\microservice_authservice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:microservice_authservice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\authservice\\microservice_authservice\\microservice_authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0374E662-7E68-422D-8A29-01A7EAE772F4}|microservice_AuthService.csproj|solutionrelative:microservice_authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,9 +96,13 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 277,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -46,73 +113,324 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "InventarioCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioCreateDTO.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\DTOs\\InventarioCreateDTO.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioCreateDTO.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\DTOs\\InventarioCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T02:53:43.395Z",
+              "WhenOpened": "2025-11-08T22:06:18.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InventarioProfile.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Mappings\\InventarioProfile.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\Mappings\\InventarioProfile.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Mappings\\InventarioProfile.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\Mappings\\InventarioProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T22:05:28.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "seedData.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Data\\seedData.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\Data\\seedData.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Data\\seedData.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\Data\\seedData.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T21:59:05.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventarioResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioResponseDTO.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\DTOs\\InventarioResponseDTO.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioResponseDTO.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\DTOs\\InventarioResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T22:06:33.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EquiposController.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Controllers\\EquiposController.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\Controllers\\EquiposController.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Controllers\\EquiposController.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\Controllers\\EquiposController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T22:09:28.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InventarioUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioUpdateDTO.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\DTOs\\InventarioUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\DTOs\\InventarioUpdateDTO.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\DTOs\\InventarioUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T22:06:37.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventarioContext.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Data\\InventarioContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\Data\\InventarioContext.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Data\\InventarioContext.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\Data\\InventarioContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T21:57:35.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Equipo.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Models\\Equipo.cs",
+              "RelativeDocumentMoniker": "..\\..\\InventoryService\\microservice_InvService\\Models\\Equipo.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\InventoryService\\microservice_InvService\\Models\\Equipo.cs",
+              "RelativeToolTip": "..\\..\\InventoryService\\microservice_InvService\\Models\\Equipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T19:34:39.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EquipmentRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\Models\\EquipmentRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T00:28:53.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\Program.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwAEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T00:30:35.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\appsettings.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-02T23:38:59.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegistryController.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAHgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T00:30:30.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "tasks.vs.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\.vs\\tasks.vs.json",
+              "RelativeDocumentMoniker": "..\\..\\.vs\\tasks.vs.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\.vs\\tasks.vs.json",
+              "RelativeToolTip": "..\\..\\.vs\\tasks.vs.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T00:36:44.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-05T22:01:35.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwEsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwBkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T02:51:26.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-21T02:39:46.184Z"
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:53:43.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T02:30:47.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T02:29:16.93Z"
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-02T23:37:43.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 18,
+              "Title": "microservice_Equipment.http",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.http",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\microservice_Equipment.http",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.http",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\microservice_Equipment.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-03T00:43:38.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:29:16.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "microservice_Equipment.csproj",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\microservice_Equipment.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-03T00:47:08.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-21T02:39:46.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RegistroContext.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
+              "RelativeToolTip": "..\\..\\EquipmentService\\microservice_Equipment\\Data\\RegistroContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T23:40:06.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T23:35:12.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "microservice_AuthService.http",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\microservice_AuthService.http",
+              "RelativeDocumentMoniker": "microservice_AuthService.http",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\microservice_AuthService.http",
+              "RelativeToolTip": "microservice_AuthService.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-02T23:30:24.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "microservice_AuthService.csproj",
-              "DocumentMoniker": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\microservice_AuthService.csproj",
+              "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\microservice_AuthService.csproj",
               "RelativeDocumentMoniker": "microservice_AuthService.csproj",
-              "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\microservice_AuthService.csproj",
+              "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\microservice_AuthService.csproj",
               "RelativeToolTip": "microservice_AuthService.csproj",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
