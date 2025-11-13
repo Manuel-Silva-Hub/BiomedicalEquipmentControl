@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|solutionrelative:controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CDE947-E77E-41B4-B223-44DCC1806BA3}|microservice_Equipment.csproj|c:\\users\\vegas\\source\\repos\\manuel-silva-hub\\biomedicalequipmentcontrol\\equipmentservice\\microservice_equipment\\data\\registrocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -96,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -109,13 +109,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "RegistryController.cs",
               "DocumentMoniker": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegistryController.cs",
               "ToolTip": "C:\\Users\\vegas\\source\\repos\\Manuel-Silva-Hub\\BiomedicalEquipmentControl\\EquipmentService\\microservice_Equipment\\Controllers\\RegistryController.cs",
               "RelativeToolTip": "Controllers\\RegistryController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvw0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowFUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T14:49:36.577Z",
               "EditorCaption": ""
