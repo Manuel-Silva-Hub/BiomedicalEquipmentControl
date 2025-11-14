@@ -83,7 +83,7 @@ namespace microservice_Equipment.Controllers
 
         // GET: api/registro/fecha?inicio=2025-10-01&fin=2025-10-22
         [HttpGet("fecha")]
-        [Authorize(Roles = "TI")]
+        [Authorize(Roles = "TI, Vigilante")]
         public async Task<ActionResult<IEnumerable<RecordResponseDTO>>> FiltrarPorFecha(DateTime inicio, DateTime fin)
         {
             var registros = await _context.Equipmentregistration

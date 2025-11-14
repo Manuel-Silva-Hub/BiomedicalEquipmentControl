@@ -31,6 +31,15 @@ namespace ReportService.Services
                 result = await _client.GetAll();
             }
 
+            if (request.OnlyInside == true)
+            {
+                result = result.Where(r => r.IsInside).ToList();
+            }
+            else
+            {
+                result = result.Where(r => !r.IsInside).ToList();
+            }
+
             return result;
         }
     }

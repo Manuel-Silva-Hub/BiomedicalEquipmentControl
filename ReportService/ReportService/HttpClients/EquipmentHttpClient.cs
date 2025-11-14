@@ -32,7 +32,7 @@ namespace ReportService.HttpClients
         // GET api/registro/fecha
         public async Task<List<ReportResponseDTO>> GetByDate(DateTime start, DateTime end)
         {
-            var res = await _client.GetAsync($"api/registry/fecha?inicio={start:yyyy-MM-dd}&fin={end:yyyy-MM-dd}");
+            var res = await _client.GetAsync($"api/registry/fecha?inicio={start:O}&fin={end:O}");
             if (!res.IsSuccessStatusCode) return new List<ReportResponseDTO>();
 
             var json = await res.Content.ReadAsStringAsync();
