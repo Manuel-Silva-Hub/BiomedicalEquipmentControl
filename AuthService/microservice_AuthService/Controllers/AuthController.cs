@@ -73,7 +73,11 @@ namespace microservice_AuthService.Controllers
         new Claim(JwtRegisteredClaimNames.Sub, user.Email),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         new Claim(ClaimTypes.NameIdentifier, user.Id),
+<<<<<<< HEAD
         new Claim(ClaimTypes.Role, user.RolHospital ?? "Empleado")
+=======
+        new Claim("rol", user.RolHospital ?? "Empleado")
+>>>>>>> authservice
     };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
