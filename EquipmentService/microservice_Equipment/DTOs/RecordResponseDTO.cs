@@ -9,6 +9,7 @@
         public string QRCode { get; set; }
         public string PhotoUrl { get; set; }
         public string LoginUser { get; set; }
+        public string ExitUser { get; set; }
         public DateTime EntryDate { get; set; }
         public DateTime OutDate { get; set; }
         public string? OutUser { get; set; }
