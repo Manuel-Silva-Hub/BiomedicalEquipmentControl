@@ -54,8 +54,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T02:53:43.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T02:53:43.395Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T02:51:26.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T02:51:26.794Z"
             },
             {
               "$type": "Document",
@@ -78,7 +76,7 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\ALEXIS\\Documents\\UNIVERSIDAD\\VII ciclo - Colombia\\Desarrollo-Microservicios\\Proyecto_Integrador\\BiomedicalEquipmentControl\\AuthService\\microservice_AuthService\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-21T02:39:46.184Z",
               "EditorCaption": ""
