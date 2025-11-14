@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4 d17.14
+VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microservice_Equipment", "microservice_Equipment.csproj", "{E8CDE947-E77E-41B4-B223-44DCC1806BA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microservice_Equipment.Tests", "..\microservice_Equipment.Tests\microservice_Equipment.Tests.csproj", "{DBF3F4A1-6A1E-4F10-A8D0-B1CD38B04269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E8CDE947-E77E-41B4-B223-44DCC1806BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8CDE947-E77E-41B4-B223-44DCC1806BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8CDE947-E77E-41B4-B223-44DCC1806BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF3F4A1-6A1E-4F10-A8D0-B1CD38B04269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF3F4A1-6A1E-4F10-A8D0-B1CD38B04269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF3F4A1-6A1E-4F10-A8D0-B1CD38B04269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF3F4A1-6A1E-4F10-A8D0-B1CD38B04269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

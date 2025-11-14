@@ -2,16 +2,39 @@ bin/
 obj/
 
 .vs/
+#############################
+#   DOTNET / VISUAL STUDIO
+#############################
+
+# Build results (global)
+**/bin/
+**/obj/
+
+# Visual Studio cache folders
+.vscode/
+.vs/
+**/.vs/
+
+# User-specific files
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+
 
 appsettings.Development.json
 *.log
 
 **/packages/*
 !**/packages/build/
+
+# Rider / IntelliJ
+.idea/
+
+# VS cache and temp
+*.cache
+*.db
+*.pdb
 
 *.tmp
 *.temp
@@ -21,3 +44,23 @@ appsettings.Development.json
 .idea/
 
 node_modules/
+#############################
+#   CONFIG
+#############################
+
+# Logs
+*.log
+
+# Optional: prevent local env settings from being committed
+appsettings.Development.json
+
+#############################
+#   NPM / FRONTEND (si lo usas)
+#############################
+node_modules/
+
+#############################
+#   NuGet
+#############################
+**/packages/*
+!**/packages/build/
