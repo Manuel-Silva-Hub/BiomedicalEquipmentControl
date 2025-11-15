@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using microservice_Equipment.Data;
 
@@ -11,9 +12,11 @@ using microservice_Equipment.Data;
 namespace microservice_Equipment.Migrations
 {
     [DbContext(typeof(RegistroContext))]
-    partial class RegistroContextModelSnapshot : ModelSnapshot
+    [Migration("20251115141630_AddAreasAndRules")]
+    partial class AddAreasAndRules
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,8 +58,6 @@ namespace microservice_Equipment.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AreaId");
 
                     b.ToTable("AreaEquipmentRules");
                 });
@@ -114,22 +115,6 @@ namespace microservice_Equipment.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Equipmentregistration");
-                });
-
-            modelBuilder.Entity("microservice_Equipment.Models.AreaEquipmentRule", b =>
-                {
-                    b.HasOne("microservice_Equipment.Models.Area", "Area")
-                        .WithMany("Rules")
-                        .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Area");
-                });
-
-            modelBuilder.Entity("microservice_Equipment.Models.Area", b =>
-                {
-                    b.Navigation("Rules");
                 });
 #pragma warning restore 612, 618
         }

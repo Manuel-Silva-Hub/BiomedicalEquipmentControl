@@ -29,6 +29,19 @@ namespace microservice_Equipment.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            var areaExiste = await _context.Areas.AnyAsync(a => a.AreaId == dto.AreaId);
+            if (!areaExiste)
+                return BadRequest($"El área con ID {dto.AreaId} no existe.");
+
+            bool permitido = await _context.AreaEquipmentRules
+                .AnyAsync(x => x.AreaId == dto.AreaId &&
+                       x.AllowedEquipmentType == dto.EquipmentType);
+
+            if (!permitido)
+            {
+                return BadRequest("❌ Este equipo NO está autorizado para ingresar a esta área.");
+            }
+
             var entidad = _mapper.Map<EquipmentRegistration>(dto);
             _context.Equipmentregistration.Add(entidad);
             await _context.SaveChangesAsync();

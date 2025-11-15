@@ -22,5 +22,7 @@ namespace microservice_Equipment.DTOs
 
         public bool IsFrequent { get; set; } = false;
         public bool IsInside { get; set; } = true;
+
+        public int AreaId { get; set; }
     }
 }
