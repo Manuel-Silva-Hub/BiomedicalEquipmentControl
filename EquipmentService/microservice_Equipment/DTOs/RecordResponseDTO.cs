@@ -12,6 +12,9 @@
         public string ExitUser { get; set; }
         public DateTime EntryDate { get; set; }
         public DateTime OutDate { get; set; }
+        public string? OutUser { get; set; }
         public bool IsInside { get; set; }
+
+        public int AreaId { get; set; }
     }
 }

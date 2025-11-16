@@ -16,6 +16,15 @@ namespace microservice_Equipment.Mappings
 
             // De Entidad a DTO (Respuesta)
             CreateMap<EquipmentRegistration, RecordResponseDTO>();
+
+            CreateMap<Area, AreaResponseDTO>()
+    .ForMember(dest => dest.Rules, opt => opt.MapFrom(src => src.Rules));
+
+            CreateMap<AreaDTO, Area>();
+
+            CreateMap<AreaEquipmentRule, RuleResponseDTO>();
+            CreateMap<RuleDTO, AreaEquipmentRule>();
+
         }
     }
 }

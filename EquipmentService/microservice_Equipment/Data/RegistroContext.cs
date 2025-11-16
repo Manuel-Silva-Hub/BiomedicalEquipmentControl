@@ -10,5 +10,9 @@ namespace microservice_Equipment.Data
         public RegistroContext(DbContextOptions<RegistroContext> options) : base(options) { }
 
         public DbSet<EquipmentRegistration> Equipmentregistration { get; set; }
+        public DbSet<Area> Areas { get; set; }
+        public DbSet<AreaEquipmentRule> AreaEquipmentRules { get; set; }
+
+
     }
 }
