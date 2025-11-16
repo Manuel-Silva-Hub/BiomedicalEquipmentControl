@@ -1,10 +1,10 @@
+using microservice_InvService.Data;
+using microservice_InvService.Mappings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using microservice_InvService.Data;
-using microservice_InvService.Mappings; // <-- agrega este using si no está
 
 
 
@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 // USER SECRETS (para leer la cadena de conexión segura)
 builder.Configuration.AddUserSecrets<Program>();
 builder.Services.AddAutoMapper(typeof(InventarioProfile));
+builder.Configuration.AddEnvironmentVariables();
 
 // Imprimir la cadena de conexión para verificar
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -48,7 +49,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "MS_Inventario", Version = "v1" });
 
-    // Configuración de seguridad JWT en Swagger (opcional)
+    // Configuración de seguridad JWT en Swagger
     var securityScheme = new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -128,4 +129,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//app.Run("http://0.0.0.0:5070");
 app.Run();

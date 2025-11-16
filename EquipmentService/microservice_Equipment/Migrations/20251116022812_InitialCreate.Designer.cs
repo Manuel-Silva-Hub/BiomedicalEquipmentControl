@@ -12,8 +12,8 @@ using microservice_Equipment.Data;
 namespace microservice_Equipment.Migrations
 {
     [DbContext(typeof(RegistroContext))]
-    [Migration("20251108222021_UpdateEquipoModel")]
-    partial class UpdateEquipoModel
+    [Migration("20251116022812_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

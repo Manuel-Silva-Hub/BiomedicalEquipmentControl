@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Registrar Egreso</h2>
+
+    <input id="id" placeholder="ID del registro"><br>
+    <input id="usuario" placeholder="Usuario que retira"><br>
+
+    <button onclick="egreso()">Registrar</button>
+
+    <p id="msg"></p>
+
+    <script>
+async function egreso() {
+    const token = localStorage.getItem("token");
+
+    const res = await fetch("http://localhost:4000/api/registro/egreso/" + id.value, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({ ExitUser: usuario.value })
+    });
+
+    if (!res.ok) {
+        msg.textContent = "Error al registrar egreso";
+        msg.style.color = "red";
+        return;
+    }
+
+    msg.textContent = "Egreso registrado correctamente";
+    msg.style.color = "green";
+}
+    </script>
+
+</body>
+</html>

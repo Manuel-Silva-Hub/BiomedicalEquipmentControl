@@ -1,5 +1,4 @@
 using microservice_InvService.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace microservice_InvService.Data
 {

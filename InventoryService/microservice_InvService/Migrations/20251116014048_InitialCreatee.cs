@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace microservice_Equipment.Migrations
+namespace microservice_InvService.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateEquipoModel : Migration
+    public partial class InitialCreatee : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

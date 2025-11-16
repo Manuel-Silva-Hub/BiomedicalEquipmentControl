@@ -1,6 +1,6 @@
 using AutoMapper;
-using microservice_InvService.Models;
 using microservice_InvService.DTOs;
+using microservice_InvService.Models;
 
 namespace microservice_InvService.Mappings
 {

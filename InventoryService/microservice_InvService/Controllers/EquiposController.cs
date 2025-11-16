@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using microservice_InvService.Data;
+using microservice_InvService.DTOs;
+using microservice_InvService.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using microservice_InvService.Data;
-using microservice_InvService.Models;
-using microservice_InvService.DTOs;
 
 namespace microservice_InvService.Controllers
 {

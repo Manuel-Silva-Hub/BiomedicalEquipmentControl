@@ -8,7 +8,7 @@ namespace microservice_AuthService.Data
         public static async Task InitializeAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             // ?? Roles predefinidos
-            string[] roles = new[] { "Administrador", "Técnico", "Enfermero" };
+            string[] roles = new[] { "Administrador", "TI", "Enfermero" };
 
             foreach (var role in roles)
             {
@@ -26,7 +26,7 @@ namespace microservice_AuthService.Data
                     UserName = "admin@hospital.com",
                     Email = "admin@hospital.com",
                     FullName = "Carlos Ramírez",
-                    RolHospital = "Administrador",
+                    RolHospital = "TI",
                     EmailConfirmed = true
                 },
                 new ApplicationUser

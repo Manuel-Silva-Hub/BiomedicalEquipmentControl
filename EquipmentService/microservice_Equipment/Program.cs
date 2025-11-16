@@ -1,4 +1,4 @@
-using microservice_Equipment.Data;
+ï»¿using microservice_Equipment.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -7,15 +7,16 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Configuration.AddEnvironmentVariables();
 
 // secrets
 builder.Configuration.AddUserSecrets<Program>();
 
 // Test: Print the connection
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
-Console.WriteLine($"Cadena de conexión leída: {conn ?? "(vacía)"}");
+Console.WriteLine($"Cadena de conexiÃ³n leÃ­da: {conn ?? "(vacÃ­a)"}");
 
-// Conexión a BD
+// ConexiÃ³n a BD
 builder.Services.AddDbContext<RegistroContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -45,7 +46,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "MS_Registro", Version = "v1" });
 
-    // Configuración de seguridad JWT
+    // ConfiguraciÃ³n de seguridad JWT
     var securityScheme = new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -78,6 +79,24 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<RegistroContext>();
+    try
+    {
+        Console.WriteLine("Verificando/Creando base de datos...");
+        db.Database.EnsureCreated();
+        Console.WriteLine("Base de datos lista");
+
+      
+        microservice_Equipment.Data.SeedData.Initialize(db);  
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error: {ex.Message}");
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -86,6 +105,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
