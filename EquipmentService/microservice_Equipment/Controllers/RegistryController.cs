@@ -11,7 +11,6 @@ namespace microservice_Equipment.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    //CAMBIOS UNO
     public class RegistryController : ControllerBase
     {
         private readonly RegistroContext _context;
@@ -30,6 +29,19 @@ namespace microservice_Equipment.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            var areaExiste = await _context.Areas.AnyAsync(a => a.AreaId == dto.AreaId);
+            if (!areaExiste)
+                return BadRequest($"El área con ID {dto.AreaId} no existe.");
+
+            bool permitido = await _context.AreaEquipmentRules
+                .AnyAsync(x => x.AreaId == dto.AreaId &&
+                       x.AllowedEquipmentType == dto.EquipmentType);
+
+            if (!permitido)
+            {
+                return BadRequest("❌ Este equipo NO está autorizado para ingresar a esta área.");
+            }
+
             var entidad = _mapper.Map<EquipmentRegistration>(dto);
             _context.Equipmentregistration.Add(entidad);
             await _context.SaveChangesAsync();
@@ -40,14 +52,14 @@ namespace microservice_Equipment.Controllers
 
         // PUT: api/registro/egreso/{id}
         [HttpPut("egreso/{id}")]
-        public async Task<IActionResult> RegistrarEgreso(int id, [FromBody] RegistroEgresoDTO dto)
+        public async Task<IActionResult> RegistrarEgreso(int id, [FromBody] RecordEgressDTO dto)
         {
             var registro = await _context.Equipmentregistration.FindAsync(id);
             if (registro == null || !registro.IsInside)
                 return NotFound("El equipo no está dentro del hospital o no existe.");
 
             registro.OutDate = DateTime.Now;
-            registro.OutUser = dto.ExitUser;
+            registro.OutUser = dto.OutUser;
             registro.IsInside = false;
 
             await _context.SaveChangesAsync();
@@ -84,7 +96,7 @@ namespace microservice_Equipment.Controllers
 
         // GET: api/registro/fecha?inicio=2025-10-01&fin=2025-10-22
         [HttpGet("fecha")]
-        [Authorize(Roles = "TI")]
+        [Authorize(Roles = "TI, Vigilante")]
         public async Task<ActionResult<IEnumerable<RecordResponseDTO>>> FiltrarPorFecha(DateTime inicio, DateTime fin)
         {
             var registros = await _context.Equipmentregistration

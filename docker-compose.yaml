@@ -61,6 +61,23 @@ services:
       - sqlserver
     networks:
       - appnet
+  reportservice:
+    build: ./ReportService/ReportService
+    container_name: reportservice
+    ports:
+      - "5074:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Jwt__Key=SuperClaveUltraSecreta_123456789_MismoParaTodos
+      - Jwt__Issuer=HospitalBiomedAPI
+      - Jwt__Audience=HospitalBiomedAPI
+      - ASPNETCORE_URLS=http://+:80
+      - EquipmentServiceUrl=http://equipmentservice
+    depends_on:
+      - sqlserver
+      - equipmentservice
+    networks:
+      - appnet
 
   apigateway:
     build: ./ApiGateway
