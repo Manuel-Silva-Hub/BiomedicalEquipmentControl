@@ -52,14 +52,14 @@ namespace microservice_Equipment.Controllers
 
         // PUT: api/registro/egreso/{id}
         [HttpPut("egreso/{id}")]
-        public async Task<IActionResult> RegistrarEgreso(int id, [FromBody] RecordEgressDTO dto)
+        public async Task<IActionResult> RegistrarEgreso(int id, [FromBody] RegistroEgresoDTO dto)
         {
             var registro = await _context.Equipmentregistration.FindAsync(id);
             if (registro == null || !registro.IsInside)
                 return NotFound("El equipo no está dentro del hospital o no existe.");
 
             registro.OutDate = DateTime.Now;
-            registro.OutUser = dto.OutUser;
+            registro.OutUser = dto.ExitUser;
             registro.IsInside = false;
 
             await _context.SaveChangesAsync();
