@@ -1,0 +1,6 @@
+@microservice_InvService_HostAddress = http://localhost:5068
+
+GET {{microservice_InvService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

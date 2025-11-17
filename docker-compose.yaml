@@ -1,0 +1,107 @@
+version: "3.9"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: StrongPass123!
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - appnet
+
+  authservice:
+    build: ./AuthService/microservice_AuthService
+    container_name: authservice
+    ports:
+      - "4000:80"
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Development
+     - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=AuthDB;User Id=sa;Password=StrongPass123!;TrustServerCertificate=True;
+     - Jwt__Key=SuperClaveUltraSecreta_123456789_MismoParaTodos
+     - Jwt__Issuer=HospitalBiomedAPI
+     - Jwt__Audience=HospitalBiomedAPI
+     - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - sqlserver
+    networks:
+      - appnet
+
+  equipmentservice:
+    build: ./EquipmentService/microservice_Equipment
+    container_name: equipmentservice
+    ports:
+      - "5068:80"
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=EquipDB;User Id=sa;Password=StrongPass123!;TrustServerCertificate=True;
+    - Jwt__Key=SuperClaveUltraSecreta_123456789_MismoParaTodos
+    - Jwt__Issuer=HospitalBiomedAPI
+    - Jwt__Audience=HospitalBiomedAPI
+    - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - sqlserver
+    networks:
+      - appnet
+
+  inventoryservice:
+    build: ./InventoryService/microservice_InvService
+    container_name: inventoryservice
+    ports:
+      - "5070:80"
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Development
+     - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=inventoryDB;User Id=sa;Password=StrongPass123!;TrustServerCertificate=True;
+     - Jwt__Key=SuperClaveUltraSecreta_123456789_MismoParaTodos
+     - Jwt__Issuer=HospitalBiomedAPI
+     - Jwt__Audience=HospitalBiomedAPI
+     - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - sqlserver
+    networks:
+      - appnet
+  reportservice:
+    build: ./ReportService/ReportService
+    container_name: reportservice
+    ports:
+      - "5074:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Jwt__Key=SuperClaveUltraSecreta_123456789_MismoParaTodos
+      - Jwt__Issuer=HospitalBiomedAPI
+      - Jwt__Audience=HospitalBiomedAPI
+      - ASPNETCORE_URLS=http://+:80
+      - EquipmentServiceUrl=http://equipmentservice
+    depends_on:
+      - sqlserver
+      - equipmentservice
+    networks:
+      - appnet
+
+  apigateway:
+    build: ./ApiGateway
+    container_name: apigateway
+    ports:
+      - "8000:8080"
+    environment:
+    - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - authservice
+      - equipmentservice
+      - inventoryservice
+    networks:
+      - appnet
+
+  frontend:
+    image: nginx:alpine
+    container_name: frontendportal
+    volumes:
+      - ./FrontendPortal:/usr/share/nginx/html:ro
+    ports:
+      - "8081:80"
+    networks:
+      - appnet
+
+networks:
+  appnet:

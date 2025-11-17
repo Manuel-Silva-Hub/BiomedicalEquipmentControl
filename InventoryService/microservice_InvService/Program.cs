@@ -1,26 +1,29 @@
-ï»¿using microservice_Equipment.Data;
+using microservice_InvService.Data;
+using microservice_InvService.Mappings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// USER SECRETS (para leer la cadena de conexión segura)
+builder.Configuration.AddUserSecrets<Program>();
+builder.Services.AddAutoMapper(typeof(InventarioProfile));
 builder.Configuration.AddEnvironmentVariables();
 
-// secrets
-builder.Configuration.AddUserSecrets<Program>();
-
-// Test: Print the connection
+// Imprimir la cadena de conexión para verificar
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
-Console.WriteLine($"Cadena de conexiÃ³n leÃ­da: {conn ?? "(vacÃ­a)"}");
+Console.WriteLine($"Cadena de conexión leída: {conn ?? "(vacía)"}");
 
-// ConexiÃ³n a BD
-builder.Services.AddDbContext<RegistroContext>(options =>
+// CONEXIÓN A SQL SERVER
+builder.Services.AddDbContext<InventarioContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// JWT
+// JWT 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
@@ -36,18 +39,17 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     };
 });
 
-
-// AutoMapper
+// AUTOMAPPER
 builder.Services.AddAutoMapper(typeof(Program));
 
+// CONTROLLERS + SWAGGER
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MS_Registro", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MS_Inventario", Version = "v1" });
 
-    // ConfiguraciÃ³n de seguridad JWT
+    // Configuración de seguridad JWT en Swagger
     var securityScheme = new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -78,39 +80,54 @@ builder.Services.AddSwaggerGen(c =>
     c.AddSecurityRequirement(securityRequirement);
 });
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy => policy
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+
+Console.WriteLine($" Conectando a: {builder.Configuration.GetConnectionString("DefaultConnection")}");
+
+// BUILD
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<RegistroContext>();
+    var services = scope.ServiceProvider;
     try
     {
-        Console.WriteLine("Verificando/Creando base de datos...");
-        db.Database.EnsureCreated();
-        Console.WriteLine("Base de datos lista");
-
-      
-        microservice_Equipment.Data.SeedData.Initialize(db);  
+        var context = services.GetRequiredService<InventarioContext>();
+        context.Database.EnsureCreated(); // Crea la BD si no existe
+        SeedData.Initialize(context);     // Agrega los datos quemados
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"Error: {ex.Message}");
+        Console.WriteLine($"Error al inicializar la base de datos: {ex.Message}");
     }
 }
 
-// Configure the HTTP request pipeline.
+
+// PIPELINE HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
+// autenticación
 app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
+//app.Run("http://0.0.0.0:5070");
 app.Run();

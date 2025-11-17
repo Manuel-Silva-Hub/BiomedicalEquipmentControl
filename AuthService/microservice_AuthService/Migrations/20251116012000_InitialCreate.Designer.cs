@@ -12,7 +12,7 @@ using microservice_AuthService.Data;
 namespace microservice_AuthService.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251021031208_InitialCreate")]
+    [Migration("20251116012000_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
