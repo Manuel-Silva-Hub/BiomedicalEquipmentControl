@@ -13,6 +13,29 @@ namespace microservice_Equipment.Data
                 return;
             }
 
+            if (!context.Areas.Any())
+            {
+                context.Areas.AddRange(
+                    new Area { Name = "Emergencias" },
+                    new Area { Name = "UCI" },
+                    new Area { Name = "Laboratorio" }
+                );
+                context.SaveChanges();
+            }
+
+            if (!context.AreaEquipmentRules.Any())
+            {
+                context.AreaEquipmentRules.AddRange(
+                    new AreaEquipmentRule { AreaId = 1, AllowedEquipmentType = "Desfibrilador" },
+                    new AreaEquipmentRule { AreaId = 1, AllowedEquipmentType = "Monitor de Signos Vitales" },
+                    new AreaEquipmentRule { AreaId = 2, AllowedEquipmentType = "Ventilador Mecánico" },
+                    new AreaEquipmentRule { AreaId = 2, AllowedEquipmentType = "Oxímetro de Pulso" },
+                    new AreaEquipmentRule { AreaId = 3, AllowedEquipmentType = "Bomba de Infusión" },
+                    new AreaEquipmentRule { AreaId = 3, AllowedEquipmentType = "Electrocardiógrafo" }
+                );
+                context.SaveChanges();
+            }
+
             var equipos = new[]
             {
                 new EquipmentRegistration
@@ -24,7 +47,8 @@ namespace microservice_Equipment.Data
                     PhotoUrl = "",  
                     EntryDate = DateTime.Now.AddHours(-5),
                     LoginUser = "admin@hospital.com",
-                    IsInside = true
+                    IsInside = true,
+                    AreaId = 1
                 },
                 new EquipmentRegistration
                 {
@@ -35,7 +59,8 @@ namespace microservice_Equipment.Data
                     PhotoUrl = "",
                     EntryDate = DateTime.Now.AddHours(-4),
                     LoginUser = "enfermeria@hospital.com",
-                    IsInside = true
+                    IsInside = true,
+                    AreaId = 2
                 },
                 new EquipmentRegistration
                 {
@@ -46,7 +71,8 @@ namespace microservice_Equipment.Data
                     PhotoUrl = "",
                     EntryDate = DateTime.Now.AddHours(-3),
                     LoginUser = "admin@hospital.com",
-                    IsInside = true
+                    IsInside = true,
+                    AreaId = 3
                 },
                 new EquipmentRegistration
                 {
@@ -57,7 +83,8 @@ namespace microservice_Equipment.Data
                     PhotoUrl = "",
                     EntryDate = DateTime.Now.AddHours(-2),
                     LoginUser = "cardiologia@hospital.com",
-                    IsInside = true
+                    IsInside = true,
+                    AreaId = 3
                 },
                 new EquipmentRegistration
                 {
@@ -68,7 +95,8 @@ namespace microservice_Equipment.Data
                     PhotoUrl = "",
                     EntryDate = DateTime.Now.AddHours(-1),
                     LoginUser = "urgencias@hospital.com",
-                    IsInside = true
+                    IsInside = true,
+                    AreaId = 1
                 },
                 new EquipmentRegistration
                 {
@@ -81,7 +109,8 @@ namespace microservice_Equipment.Data
                     LoginUser = "admin@hospital.com",
                     OutDate = DateTime.Now.AddDays(-3),
                     OutUser = "admin@hospital.com",
-                    IsInside = false
+                    IsInside = false,
+                    AreaId = 2
                 }
             };
 

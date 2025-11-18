@@ -28,6 +28,7 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
+    console.error('Error interceptado:', error.response);
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       window.location.href = '/login';

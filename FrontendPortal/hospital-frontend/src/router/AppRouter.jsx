@@ -13,6 +13,8 @@ import { RegistroIngreso } from '../pages/RegistroIngreso';
 import { RegistroEgreso } from '../pages/RegistroEgreso';
 import { Reportes } from '../pages/Reportes';
 import { Historial } from '../pages/Historial';
+import { EquiposIngresados } from '../pages/EquiposIngresados';
+import { EquiposRetirados } from '../pages/EquiposRetirados';
 
 export const AppRouter = () => {
   return (
@@ -86,6 +88,24 @@ export const AppRouter = () => {
                 </ProtectedRoute>
               }
             />
+
+            <Route
+              path="equipos-ingresados"
+              element={
+                <ProtectedRoute allowedRoles={['TI', 'Vigilante']}>
+                  <EquiposIngresados />
+                </ProtectedRoute>
+              }
+              />
+
+              <Route
+                path="equipos-retirados"
+                element={
+                  <ProtectedRoute allowedRoles={['TI', 'Vigilante']}>
+                    <EquiposRetirados />
+                  </ProtectedRoute>
+                }
+              />
           </Route>
 
           {/* Ruta 404 */}

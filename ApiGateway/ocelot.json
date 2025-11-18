@@ -1,6 +1,18 @@
 {
   "Routes": [
     {
+      "DownstreamPathTemplate": "/api/registry",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "equipmentservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/registry",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/registry/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -47,6 +59,18 @@
       ],
       "UpstreamPathTemplate": "/api/equipos",
       "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/equipos/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "inventoryservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/equipos/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST","PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/api/auth/{everything}",

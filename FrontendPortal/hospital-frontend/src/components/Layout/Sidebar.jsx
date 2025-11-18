@@ -9,6 +9,8 @@ import {
   History,
   ArrowDownToLine,
   ArrowUpFromLine,
+  CheckCircle,
+  XCircle,
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -18,6 +20,8 @@ export const Sidebar = ({ isOpen, onClose }) => {
   const menuItems = [
     { path: '/dashboard', icon: LayoutDashboard, label: 'Dashboard', roles: ['TI', 'Vigilante', 'Empleado'] },
     { path: '/inventario', icon: Package, label: 'Inventario', roles: ['TI', 'Empleado'] },
+    { path: '/equipos-ingresados', icon: CheckCircle, label: 'Equipos Ingresados', roles: ['TI', 'Vigilante'] }, // ← Nuevo
+    { path: '/equipos-retirados', icon: XCircle, label: 'Equipos Retirados', roles: ['TI', 'Vigilante'] },
     { path: '/registro-ingreso', icon: ArrowDownToLine, label: 'Registro Ingreso', roles: ['TI', 'Vigilante'] },
     { path: '/registro-egreso', icon: ArrowUpFromLine, label: 'Registro Egreso', roles: ['TI', 'Vigilante'] },
     { path: '/reportes', icon: FileText, label: 'Reportes', roles: ['TI'] },

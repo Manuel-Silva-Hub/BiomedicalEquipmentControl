@@ -15,7 +15,9 @@ namespace microservice_Equipment.Mappings
                 .ForMember(dest => dest.IsInside, opt => opt.MapFrom(src => true));
 
             // De Entidad a DTO (Respuesta)
-            CreateMap<EquipmentRegistration, RecordResponseDTO>();
+            CreateMap<EquipmentRegistration, RecordResponseDTO>()
+                .ForMember(dest => dest.Name, 
+                            opt => opt.MapFrom(src => src.Area.Name));
 
             CreateMap<Area, AreaResponseDTO>()
     .ForMember(dest => dest.Rules, opt => opt.MapFrom(src => src.Rules));

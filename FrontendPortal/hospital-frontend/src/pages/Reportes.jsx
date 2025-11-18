@@ -268,7 +268,7 @@ export const Reportes = () => {
                       <td className="px-4 py-3 text-sm">{item.registrationId || item.id || '-'}</td>
                       <td className="px-4 py-3 text-sm font-medium">{item.equipmentType || '-'}</td>
                       <td className="px-4 py-3 text-sm">{item.serial || '-'}</td>
-                      <td className="px-4 py-3 text-sm">{item.areaName || item.area || '-'}</td>
+                      <td className="px-4 py-3 text-sm">{item.name || item.area || '-'}</td>
                       <td className="px-4 py-3 text-sm">{item.loginUser || item.responsable || '-'}</td>
                       <td className="px-4 py-3 text-sm">
                         {item.entryDate ? new Date(item.entryDate).toLocaleDateString('es-CO') : '-'}

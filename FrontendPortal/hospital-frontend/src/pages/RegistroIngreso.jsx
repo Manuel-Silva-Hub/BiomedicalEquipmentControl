@@ -4,14 +4,16 @@ import { Card } from '../components/UI/Card';
 import { Button } from '../components/UI/Button';
 import { equipmentService } from '../api/equipmentService';
 import { inventoryService } from '../api/inventoryService';
-import { ArrowDownToLine, AlertCircle, CheckCircle, User } from 'lucide-react';
+import { ArrowDownToLine, AlertCircle, CheckCircle, User, AlertTriangle } from 'lucide-react';
 
 export const RegistroIngreso = () => {
   const [areas, setAreas] = useState([]);
   const [equipos, setEquipos] = useState([]);
+  const [registrosActivos, setRegistrosActivos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [warning, setWarning] = useState('');
   
   const [formData, setFormData] = useState({
     equipoId: '',
@@ -27,16 +29,19 @@ export const RegistroIngreso = () => {
 
   const loadData = async () => {
     try {
-      const [areasData, equiposData] = await Promise.all([
+      const [areasData, equiposData, registrosData] = await Promise.all([
         equipmentService.getAreas().catch(() => []),
         inventoryService.getEquipos(),
+        equipmentService.getRegistrosEnInstalacion().catch(() => []),
       ]);
       
-      console.log('Áreas cargadas:', areasData); // Debug
-      console.log('Equipos cargados:', equiposData); // Debug
+      console.log('Áreas cargadas:', areasData);
+      console.log('Equipos cargados:', equiposData);
+      console.log('Registros activos:', registrosData);
       
       setAreas(areasData);
       setEquipos(equiposData);
+      setRegistrosActivos(registrosData);
     } catch (error) {
       console.error('Error al cargar datos:', error);
       setError('Error al cargar los datos');
@@ -47,12 +52,36 @@ export const RegistroIngreso = () => {
     const { name, value, type, checked } = e.target;
     const newValue = type === 'checkbox' ? checked : value;
     
-    console.log(`Campo ${name}:`, newValue, 'tipo:', typeof newValue); // Debug
-    
     setFormData({
       ...formData,
       [name]: newValue,
     });
+
+    if (name === 'equipoId') {
+      setWarning('');
+      verificarEquipoYaDentro(value);
+    }
+  };
+
+  const verificarEquipoYaDentro = (equipoId) => {
+    if (!equipoId) return;
+
+    const equipoSeleccionado = equipos.find((eq) => eq.id === parseInt(equipoId, 10));
+    if (!equipoSeleccionado) return;
+
+    const yaRegistrado = registrosActivos.find(
+      (registro) => 
+        registro.serial === equipoSeleccionado.serial && 
+        registro.isInside === true
+    );
+
+    if (yaRegistrado) {
+      setWarning(
+        `⚠️ ADVERTENCIA: Este equipo ya está registrado dentro del hospital en el área "${yaRegistrado.name}" desde el ${new Date(yaRegistrado.entryDate).toLocaleDateString('es-CO')}.`
+      );
+    } else {
+      setWarning('');
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -62,9 +91,9 @@ export const RegistroIngreso = () => {
     setSuccess(false);
 
     try {
-      console.log('FormData completo:', formData); // Debug
+      console.log('FormData completo:', formData);
 
-      // Validaciones
+      // Validaciones básicas
       if (!formData.equipoId || formData.equipoId === '') {
         throw new Error('Debe seleccionar un equipo');
       }
@@ -77,10 +106,7 @@ export const RegistroIngreso = () => {
         throw new Error('Debe ingresar el nombre del responsable');
       }
 
-      // Validar que el areaId sea un número válido
       const areaIdNumber = parseInt(formData.areaId, 10);
-      console.log('areaId parseado:', areaIdNumber, 'válido:', !isNaN(areaIdNumber)); // Debug
-      
       if (isNaN(areaIdNumber)) {
         throw new Error('El ID del área no es válido');
       }
@@ -94,7 +120,20 @@ export const RegistroIngreso = () => {
         throw new Error('Equipo no encontrado');
       }
 
-      console.log('Equipo seleccionado:', equipoSeleccionado); // Debug
+      // ← Validación: Verificar si el equipo ya está dentro
+      const yaRegistrado = registrosActivos.find(
+        (registro) => 
+          registro.serial === equipoSeleccionado.serial && 
+          registro.isInside === true
+      );
+
+      if (yaRegistrado) {
+        throw new Error(
+          `Este equipo ya está dentro del hospital en el área "${yaRegistrado.areaName}". Debe registrar primero su salida antes de volver a ingresarlo.`
+        );
+      }
+
+      console.log('Equipo seleccionado:', equipoSeleccionado);
 
       // Crear payload según el formato del backend
       const entryData = {
@@ -111,11 +150,12 @@ export const RegistroIngreso = () => {
       };
 
       console.log('Datos a enviar:', entryData);
-      console.log('Payload JSON:', JSON.stringify(entryData, null, 2)); // Debug
+      console.log('Payload JSON:', JSON.stringify(entryData, null, 2));
 
       await equipmentService.createEntry(entryData);
       
       setSuccess(true);
+      setWarning('');
       setFormData({
         equipoId: '',
         areaId: '',
@@ -124,19 +164,53 @@ export const RegistroIngreso = () => {
         isFrequent: false,
       });
 
+      loadData();
+
       setTimeout(() => {
         setSuccess(false);
       }, 3000);
     } catch (err) {
       console.error('Error al registrar ingreso:', err);
-      console.error('Response:', err.response);
+      console.error('Response completo:', err.response);
       
-      if (err.response?.data?.errors) {
-        const errores = Object.values(err.response.data.errors).flat();
-        setError(errores.join(', '));
-      } else {
-        setError(err.response?.data?.message || err.message || 'Error al registrar ingreso');
+      // ← Manejo mejorado de errores del backend
+      let errorMessage = 'Error al registrar ingreso';
+
+      if (err.message && !err.response) {
+        // Error de validación local
+        errorMessage = err.message;
+      } else if (err.response?.data) {
+        const responseData = err.response.data;
+        
+        // Si el backend devuelve un mensaje de texto simple
+        if (typeof responseData === 'string') {
+          errorMessage = responseData;
+        }
+        // Si el backend devuelve un objeto con message
+        else if (responseData.message) {
+          errorMessage = responseData.message;
+        }
+        // Si el backend devuelve un objeto con title (problema de autorización)
+        else if (responseData.title) {
+          errorMessage = responseData.title;
+          
+          // Si hay detalles adicionales
+          if (responseData.detail) {
+            errorMessage += `: ${responseData.detail}`;
+          }
+        }
+        // Si el backend devuelve errores de validación
+        else if (responseData.errors) {
+          const errores = Object.values(responseData.errors).flat();
+          errorMessage = errores.join(', ');
+        }
+        // Si es un error 403 o 401 (no autorizado)
+        else if (err.response.status === 403 || err.response.status === 401) {
+          errorMessage = '❌ Este equipo NO está autorizado para ingresar a esta área.';
+        }
       }
+
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -161,6 +235,23 @@ export const RegistroIngreso = () => {
         >
           <CheckCircle size={20} />
           <span>¡Ingreso registrado exitosamente!</span>
+        </motion.div>
+      )}
+
+      {/* ← Nuevo: Advertencia (distinto al error) */}
+      {warning && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-yellow-50 border border-yellow-200 text-yellow-800 px-4 py-3 rounded-lg"
+        >
+          <div className="flex items-start gap-2">
+            <AlertTriangle size={20} className="flex-shrink-0 mt-0.5" />
+            <div className="text-sm">
+              <p className="font-semibold">Advertencia:</p>
+              <p>{warning}</p>
+            </div>
+          </div>
         </motion.div>
       )}
 
@@ -231,7 +322,6 @@ export const RegistroIngreso = () => {
                   </option>
                 ))}
               </select>
-              {/* Debug: Mostrar áreas cargadas */}
               {areas.length > 0 && (
                 <p className="text-xs text-gray-500 mt-1">
                   {areas.length} área(s) disponible(s)
@@ -298,7 +388,10 @@ export const RegistroIngreso = () => {
             <Button type="button" variant="secondary" onClick={() => window.history.back()}>
               Cancelar
             </Button>
-            <Button type="submit" disabled={loading}>
+            <Button 
+              type="submit" 
+              disabled={loading || !!warning} // ← Deshabilitar si hay advertencia
+            >
               {loading ? 'Registrando...' : 'Registrar Ingreso'}
             </Button>
           </div>

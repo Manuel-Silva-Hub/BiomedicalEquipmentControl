@@ -32,5 +32,6 @@ namespace microservice_Equipment.Models
         public bool IsInside { get; set; } = true;
 
         public int AreaId { get; set; }
+        public Area Area { get; set; }
     }
 }

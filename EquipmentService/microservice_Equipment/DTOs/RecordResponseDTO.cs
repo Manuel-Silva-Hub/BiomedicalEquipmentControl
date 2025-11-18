@@ -16,5 +16,6 @@
         public bool IsInside { get; set; }
 
         public int AreaId { get; set; }
+        public string Name { get; set; }
     }
 }

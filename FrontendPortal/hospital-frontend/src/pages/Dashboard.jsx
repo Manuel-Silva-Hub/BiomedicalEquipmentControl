@@ -10,6 +10,7 @@ import { useAuth } from '../hooks/useAuth';
 export const Dashboard = () => {
   const [stats, setStats] = useState({
     equiposEnHospital: 0,
+    equiposFuera: 0,
     ultimosIngresos: [],
     alertas: 0,
   });
@@ -25,8 +26,12 @@ export const Dashboard = () => {
   const loadDashboardData = async () => {
     try {
       const registros = await equipmentService.getRegistrosEnInstalacion();
+      const registrosTodos = await equipmentService.getRegistros();
+
+      const equiposFuera = registrosTodos.filter(r => r.isInside === false);
       setStats({
         equiposEnHospital: registros.length,
+        equiposFuera: equiposFuera.length,
         ultimosIngresos: registros.slice(0, 5),
         alertas: registros.filter(r => r.estado === 'alerta').length,
       });
@@ -74,11 +79,11 @@ export const Dashboard = () => {
       trend: '-3%',
     },
     {
-      title: 'Estado del Sistema',
-      value: 'Óptimo',
+      title: 'Equipos fuera del hospital',
+      value: stats.equiposFuera,
       icon: Activity,
       color: 'bg-purple-500',
-      trend: '100%',
+      trend: '+2%',
     },
   ];
 
@@ -129,7 +134,7 @@ export const Dashboard = () => {
               <tr>
                 <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">ID</th>
                 <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Equipo</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Numero de Serie</th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Area</th>
                 <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Fecha Ingreso</th>
                 <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Estado</th>
               </tr>
@@ -145,7 +150,7 @@ export const Dashboard = () => {
                   >
                     <td className="px-4 py-3 text-sm">{registro.id}</td>
                     <td className="px-4 py-3 text-sm font-medium">{registro.equipmentType}</td>
-                    <td className="px-4 py-3 text-sm">{registro.serial}</td>
+                    <td className="px-4 py-3 text-sm">{registro.name}</td>
                     <td className="px-4 py-3 text-sm">
                       {new Date(registro.entryDate).toLocaleDateString()}
                     </td>

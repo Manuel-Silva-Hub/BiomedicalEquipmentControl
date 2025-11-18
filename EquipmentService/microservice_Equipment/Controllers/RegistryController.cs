@@ -74,8 +74,10 @@ namespace microservice_Equipment.Controllers
         public async Task<ActionResult<IEnumerable<RecordResponseDTO>>> ObtenerTodos()
         {
             var registros = await _context.Equipmentregistration
+                .Include(r => r.Area)
                 .OrderByDescending(r => r.EntryDate)
                 .ToListAsync();
+
 
             var respuesta = _mapper.Map<IEnumerable<RecordResponseDTO>>(registros);
             return Ok(respuesta);
@@ -86,7 +88,9 @@ namespace microservice_Equipment.Controllers
         [Authorize(Roles = "TI,Vigilante")]
         public async Task<ActionResult<RecordResponseDTO>> ObtenerPorId(int id)
         {
-            var registro = await _context.Equipmentregistration.FindAsync(id);
+            var registro = await _context.Equipmentregistration
+                .Include(r => r.Area)
+                .FirstOrDefaultAsync(r => r.Id == id);
             if (registro == null)
                 return NotFound();
 
@@ -100,8 +104,10 @@ namespace microservice_Equipment.Controllers
         public async Task<ActionResult<IEnumerable<RecordResponseDTO>>> FiltrarPorFecha(DateTime inicio, DateTime fin)
         {
             var registros = await _context.Equipmentregistration
+                .Include(r => r.Area)
                 .Where(r => r.EntryDate >= inicio && r.EntryDate <= fin)
                 .ToListAsync();
+
 
             if (!registros.Any())
                 return NotFound("No se encontraron registros en el rango especificado.");
@@ -116,8 +122,10 @@ namespace microservice_Equipment.Controllers
         public async Task<ActionResult<IEnumerable<RecordResponseDTO>>> ObtenerEquiposEnInstalacion()
         {
             var registros = await _context.Equipmentregistration
+                .Include(r => r.Area)
                 .Where(r => r.IsInside)
                 .ToListAsync();
+
 
             var respuesta = _mapper.Map<IEnumerable<RecordResponseDTO>>(registros);
             return Ok(respuesta);
