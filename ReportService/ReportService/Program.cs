@@ -44,7 +44,7 @@ builder.Services.AddAuthentication("Bearer")
 // HttpClient for EquipmentService
 builder.Services.AddHttpClient("EquipmentService", c =>
 {
-    c.BaseAddress = new Uri("https://localhost:44366/");
+    c.BaseAddress = new Uri("http://equipmentservice/");
 });
 
 // Services

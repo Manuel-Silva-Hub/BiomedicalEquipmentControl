@@ -43,6 +43,32 @@ appsettings.Development.json
 .vscode/
 .idea/
 
+# Visual Studio internal caches (NO deben ir al repo)
+*.dtbcache.v2
+*.futdcache.v2
+*.v17/
+*.suo
+*.cache
+*.db
+
+# Project Evaluation metadata (causan conflictos)
+*.metadata.v9.bin
+*.projects.v9.bin
+*.strings.v9.bin
+
+# Copilot / IntelliSense caches
+CopilotIndices/
+*.indexes
+*.ide
+*.sqlite
+
+# VS DocumentLayout config
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# .csproj.user (nunca debe ir al repo)
+*.csproj.user
+
 node_modules/
 #############################
 #   CONFIG

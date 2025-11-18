@@ -13,6 +13,30 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
+      "DownstreamPathTemplate": "/api/area",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "equipmentservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/area",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/area/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "equipmentservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/area/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/equipos",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -37,7 +61,7 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/reports/{everything}",
+      "DownstreamPathTemplate": "/api/report/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -45,7 +69,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/reports/{everything}",
+      "UpstreamPathTemplate": "/api/report/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     }
   ],

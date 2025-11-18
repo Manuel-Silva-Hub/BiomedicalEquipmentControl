@@ -94,12 +94,16 @@ services:
       - appnet
 
   frontend:
-    image: nginx:alpine
+    build: 
+      context: ./FrontendPortal/hospital-frontend 
+      dockerfile: Dockerfile
     container_name: frontendportal
-    volumes:
-      - ./FrontendPortal:/usr/share/nginx/html:ro
     ports:
       - "8081:80"
+    environment:
+      - VITE_API_GATEWAY_URL=http://apigateway:8080
+    depends_on:
+      - apigateway
     networks:
       - appnet
 
