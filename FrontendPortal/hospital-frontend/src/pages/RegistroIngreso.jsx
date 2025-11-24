@@ -4,7 +4,17 @@ import { Card } from '../components/UI/Card';
 import { Button } from '../components/UI/Button';
 import { equipmentService } from '../api/equipmentService';
 import { inventoryService } from '../api/inventoryService';
-import { ArrowDownToLine, AlertCircle, CheckCircle, User, AlertTriangle } from 'lucide-react';
+import { QRScanner } from '../components/QRScanner';
+import { 
+  ArrowDownToLine, 
+  AlertCircle, 
+  CheckCircle, 
+  User, 
+  AlertTriangle,
+  Search,
+  Image as ImageIcon,
+  QrCode
+} from 'lucide-react';
 
 export const RegistroIngreso = () => {
   const [areas, setAreas] = useState([]);
@@ -14,6 +24,9 @@ export const RegistroIngreso = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
   const [warning, setWarning] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showResults, setShowResults] = useState(false);
+  const [showQRScanner, setShowQRScanner] = useState(false);
   
   const [formData, setFormData] = useState({
     equipoId: '',
@@ -45,6 +58,20 @@ export const RegistroIngreso = () => {
     } catch (error) {
       console.error('Error al cargar datos:', error);
       setError('Error al cargar los datos');
+    }
+  };
+
+  const handleQRScanned = (qrCode) => {
+  console.log('Código QR escaneado:', qrCode);
+  setSearchTerm(qrCode);
+  setShowQRScanner(false);
+
+  const equipoEncontrado = equipos.find((eq) => eq.qrCode === qrCode);
+  
+    if (equipoEncontrado) {
+      handleSelectEquipo(equipoEncontrado);
+    } else {
+      setError(`No se encontró ningún equipo con el código QR: ${qrCode}`);
     }
   };
 
@@ -84,6 +111,13 @@ export const RegistroIngreso = () => {
     }
   };
 
+  const handleSelectEquipo = (equipo) => {
+    setFormData({ ...formData, equipoId: equipo.id.toString() });
+    setSearchTerm(`${equipo.equipmentType} - ${equipo.serial}`);
+    setShowResults(false);
+    verificarEquipoYaDentro(equipo.id.toString());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -93,7 +127,6 @@ export const RegistroIngreso = () => {
     try {
       console.log('FormData completo:', formData);
 
-      // Validaciones básicas
       if (!formData.equipoId || formData.equipoId === '') {
         throw new Error('Debe seleccionar un equipo');
       }
@@ -111,7 +144,6 @@ export const RegistroIngreso = () => {
         throw new Error('El ID del área no es válido');
       }
 
-      // Obtener los datos del equipo seleccionado
       const equipoSeleccionado = equipos.find(
         (eq) => eq.id === parseInt(formData.equipoId, 10)
       );
@@ -120,22 +152,8 @@ export const RegistroIngreso = () => {
         throw new Error('Equipo no encontrado');
       }
 
-      // ← Validación: Verificar si el equipo ya está dentro
-      const yaRegistrado = registrosActivos.find(
-        (registro) => 
-          registro.serial === equipoSeleccionado.serial && 
-          registro.isInside === true
-      );
-
-      if (yaRegistrado) {
-        throw new Error(
-          `Este equipo ya está dentro del hospital en el área "${yaRegistrado.areaName}". Debe registrar primero su salida antes de volver a ingresarlo.`
-        );
-      }
-
       console.log('Equipo seleccionado:', equipoSeleccionado);
 
-      // Crear payload según el formato del backend
       const entryData = {
         equipmentType: equipoSeleccionado.equipmentType,
         serial: equipoSeleccionado.serial,
@@ -150,12 +168,12 @@ export const RegistroIngreso = () => {
       };
 
       console.log('Datos a enviar:', entryData);
-      console.log('Payload JSON:', JSON.stringify(entryData, null, 2));
 
       await equipmentService.createEntry(entryData);
       
       setSuccess(true);
       setWarning('');
+      setSearchTerm('');
       setFormData({
         equipoId: '',
         areaId: '',
@@ -173,39 +191,26 @@ export const RegistroIngreso = () => {
       console.error('Error al registrar ingreso:', err);
       console.error('Response completo:', err.response);
       
-      // ← Manejo mejorado de errores del backend
       let errorMessage = 'Error al registrar ingreso';
 
       if (err.message && !err.response) {
-        // Error de validación local
         errorMessage = err.message;
       } else if (err.response?.data) {
         const responseData = err.response.data;
         
-        // Si el backend devuelve un mensaje de texto simple
         if (typeof responseData === 'string') {
           errorMessage = responseData;
-        }
-        // Si el backend devuelve un objeto con message
-        else if (responseData.message) {
+        } else if (responseData.message) {
           errorMessage = responseData.message;
-        }
-        // Si el backend devuelve un objeto con title (problema de autorización)
-        else if (responseData.title) {
+        } else if (responseData.title) {
           errorMessage = responseData.title;
-          
-          // Si hay detalles adicionales
           if (responseData.detail) {
             errorMessage += `: ${responseData.detail}`;
           }
-        }
-        // Si el backend devuelve errores de validación
-        else if (responseData.errors) {
+        } else if (responseData.errors) {
           const errores = Object.values(responseData.errors).flat();
           errorMessage = errores.join(', ');
-        }
-        // Si es un error 403 o 401 (no autorizado)
-        else if (err.response.status === 403 || err.response.status === 401) {
+        } else if (err.response.status === 403 || err.response.status === 401) {
           errorMessage = '❌ Este equipo NO está autorizado para ingresar a esta área.';
         }
       }
@@ -215,6 +220,16 @@ export const RegistroIngreso = () => {
       setLoading(false);
     }
   };
+
+  const filteredEquipos = equipos.filter((eq) =>
+    eq.equipmentType?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    eq.serial?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    eq.qrCode?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const equipoSeleccionado = formData.equipoId 
+    ? equipos.find((eq) => eq.id === parseInt(formData.equipoId, 10))
+    : null;
 
   return (
     <motion.div
@@ -238,7 +253,6 @@ export const RegistroIngreso = () => {
         </motion.div>
       )}
 
-      {/* ← Nuevo: Advertencia (distinto al error) */}
       {warning && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -283,27 +297,127 @@ export const RegistroIngreso = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
+            {/* Búsqueda de Equipo */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Equipo *
+                Buscar Equipo *
               </label>
-              <select
-                name="equipoId"
-                value={formData.equipoId}
-                onChange={handleChange}
-                className="input-field"
-                required
-              >
-                <option value="">Seleccione un equipo</option>
-                {equipos.map((equipo) => (
-                  <option key={equipo.id} value={equipo.id}>
-                    {equipo.equipmentType} - {equipo.serial}
-                  </option>
-                ))}
-              </select>
+              <div className="flex gap-2">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-3 text-gray-400" size={20} />
+                  <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value);
+                      setShowResults(true);
+                    }}
+                    onFocus={() => setShowResults(true)}
+                    placeholder="Buscar por tipo, serial o código QR..."
+                    className="input-field pl-10 w-full"
+                    required
+                  />
+                </div>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  onClick={() => setShowQRScanner(!showQRScanner)}
+                >
+                  <QrCode size={20} className="mr-2" />
+                  {showQRScanner ? 'Cerrar' : 'Escanear QR'}
+                </Button>
+              </div>
+
+              {/* Scanner QR */}
+              {showQRScanner && (
+                <Card className="mt-4">
+                  <QRScanner
+                    onScan={handleQRScanned}
+                    onClose={() => setShowQRScanner(false)}
+                  />
+                </Card>
+              )}
+
+              {/* Resultados de búsqueda */}
+              {showResults && searchTerm && filteredEquipos.length > 0 && (
+                <div className="mt-2 border rounded-lg max-h-64 overflow-y-auto bg-white shadow-lg">
+                  {filteredEquipos.map((equipo) => (
+                    <div
+                      key={equipo.id}
+                      onClick={() => handleSelectEquipo(equipo)}
+                      className="p-3 hover:bg-gray-50 cursor-pointer border-b last:border-b-0 flex gap-3"
+                    >
+                      {equipo.photoUrl ? (
+                        <img
+                          src={equipo.photoUrl}
+                          alt={equipo.equipmentType}
+                          className="w-12 h-12 object-cover rounded"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                      ) : (
+                        <div className="w-12 h-12 bg-gray-100 rounded flex items-center justify-center">
+                          <ImageIcon size={20} className="text-gray-400" />
+                        </div>
+                      )}
+                      <div className="flex-1">
+                        <p className="font-semibold">{equipo.equipmentType}</p>
+                        <p className="text-sm text-gray-600">Serial: {equipo.serial}</p>
+                        {equipo.qrCode && (
+                          <p className="text-xs text-gray-500">QR: {equipo.qrCode}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
+            {/* Vista previa del equipo seleccionado */}
+            {equipoSeleccionado && (
+              <Card className="bg-blue-50 border-blue-200">
+                <h3 className="text-sm font-bold text-gray-700 mb-3">Vista Previa del Equipo</h3>
+                <div className="flex gap-4">
+                  {equipoSeleccionado.photoUrl ? (
+                    <img
+                      src={equipoSeleccionado.photoUrl}
+                      alt={equipoSeleccionado.equipmentType}
+                      className="w-32 h-32 object-cover rounded border"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-32 h-32 bg-gray-100 rounded border flex items-center justify-center">
+                      <ImageIcon size={48} className="text-gray-400" />
+                    </div>
+                  )}
+
+                  <div className="flex-1 grid grid-cols-2 gap-3">
+                    <div>
+                      <p className="text-xs text-gray-600">Tipo</p>
+                      <p className="font-semibold">{equipoSeleccionado.equipmentType}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-600">Serial</p>
+                      <p className="font-semibold">{equipoSeleccionado.serial}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-600">Código QR</p>
+                      <p className="font-semibold">{equipoSeleccionado.qrCode || 'N/A'}</p>
+                    </div>
+                    <div className="col-span-2">
+                      <p className="text-xs text-gray-600">Descripción</p>
+                      <p className="text-sm">{equipoSeleccionado.description || 'Sin descripción'}</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            )}
+
+            {/* Área de Destino */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Área de Destino *
@@ -322,14 +436,10 @@ export const RegistroIngreso = () => {
                   </option>
                 ))}
               </select>
-              {areas.length > 0 && (
-                <p className="text-xs text-gray-500 mt-1">
-                  {areas.length} área(s) disponible(s)
-                </p>
-              )}
             </div>
 
-            <div className="md:col-span-2">
+            {/* Responsable */}
+            <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Responsable *
               </label>
@@ -346,42 +456,38 @@ export const RegistroIngreso = () => {
                   minLength={3}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-1">
-                Ingrese el nombre completo de la persona responsable del registro
-              </p>
             </div>
-          </div>
 
-          <div>
-            <label className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                name="isFrequent"
-                checked={formData.isFrequent}
+            {/* Es Frecuente */}
+            <div>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  name="isFrequent"
+                  checked={formData.isFrequent}
+                  onChange={handleChange}
+                  className="w-4 h-4 text-hospital-blue border-gray-300 rounded focus:ring-hospital-blue"
+                />
+                <span className="text-sm font-medium text-gray-700">
+                  ¿Es un ingreso frecuente?
+                </span>
+              </label>
+            </div>
+
+            {/* Observaciones */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Observaciones
+              </label>
+              <textarea
+                name="observaciones"
+                value={formData.observaciones}
                 onChange={handleChange}
-                className="w-4 h-4 text-hospital-blue border-gray-300 rounded focus:ring-hospital-blue"
+                className="input-field"
+                rows="4"
+                placeholder="Ingrese observaciones adicionales..."
               />
-              <span className="text-sm font-medium text-gray-700">
-                ¿Es un ingreso frecuente?
-              </span>
-            </label>
-            <p className="text-xs text-gray-500 mt-1 ml-6">
-              Marque esta opción si el equipo ingresa regularmente al hospital
-            </p>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Observaciones
-            </label>
-            <textarea
-              name="observaciones"
-              value={formData.observaciones}
-              onChange={handleChange}
-              className="input-field"
-              rows="4"
-              placeholder="Ingrese observaciones adicionales sobre el equipo o el ingreso..."
-            />
+            </div>
           </div>
 
           <div className="flex gap-3 justify-end">
@@ -390,7 +496,7 @@ export const RegistroIngreso = () => {
             </Button>
             <Button 
               type="submit" 
-              disabled={loading || !!warning} // ← Deshabilitar si hay advertencia
+              disabled={loading || !!warning}
             >
               {loading ? 'Registrando...' : 'Registrar Ingreso'}
             </Button>

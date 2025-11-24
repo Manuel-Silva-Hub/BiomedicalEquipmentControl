@@ -68,6 +68,8 @@ export const equipmentService = {
   },
 
   async updateExit(id, exitData) {
+    console.log('updateExit - ID:', id); // Debug
+    console.log('updateExit - Data:', exitData); // Debug
     const response = await axiosInstance.put(`/api/registry/egreso/${id}`, exitData);
     return response.data;
   },

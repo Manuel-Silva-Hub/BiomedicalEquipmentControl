@@ -11,7 +11,7 @@ namespace microservice_Equipment.Mappings
         {
             // De DTO a Entidad (Ingreso)
             CreateMap<RegistrationEntryDTO, EquipmentRegistration>()
-                .ForMember(dest => dest.EntryDate, opt => opt.MapFrom(src => DateTime.Now))
+                .ForMember(dest => dest.EntryDate, opt => opt.MapFrom(src => src.EntryDate.ToLocalTime()))
                 .ForMember(dest => dest.IsInside, opt => opt.MapFrom(src => true));
 
             // De Entidad a DTO (Respuesta)

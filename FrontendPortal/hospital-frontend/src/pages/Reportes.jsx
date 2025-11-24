@@ -255,9 +255,9 @@ export const Reportes = () => {
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">ID</th>
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Tipo</th>
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Serial</th>
-                  <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Área</th>
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Responsable</th>
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Fecha Ingreso</th>
+                  <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Fecha Salida</th>
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Estado</th>
                 </tr>
               </thead>
@@ -268,10 +268,14 @@ export const Reportes = () => {
                       <td className="px-4 py-3 text-sm">{item.registrationId || item.id || '-'}</td>
                       <td className="px-4 py-3 text-sm font-medium">{item.equipmentType || '-'}</td>
                       <td className="px-4 py-3 text-sm">{item.serial || '-'}</td>
-                      <td className="px-4 py-3 text-sm">{item.name || item.area || '-'}</td>
                       <td className="px-4 py-3 text-sm">{item.loginUser || item.responsable || '-'}</td>
                       <td className="px-4 py-3 text-sm">
                         {item.entryDate ? new Date(item.entryDate).toLocaleDateString('es-CO') : '-'}
+                      </td>
+                      <td className="px-4 py-3 text-sm">
+                        {item.outDate && new Date(item.outDate).getFullYear() > 1900
+                          ? new Date(item.outDate).toLocaleDateString('es-CO')
+                          : '-'}
                       </td>
                       <td className="px-4 py-3">
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${

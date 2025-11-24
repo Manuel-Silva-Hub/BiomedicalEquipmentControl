@@ -54,7 +54,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
         <div className="h-full flex flex-col">
           <div className="p-6 border-b">
             <h2 className="text-2xl font-bold text-hospital-blue">
-              🏥 Hospital
+              Hospital San Rafael 🏥
             </h2>
           </div>
 

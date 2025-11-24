@@ -240,7 +240,9 @@ export const Historial = () => {
                         {formatDateTime(registro.entryDate)}
                       </td>
                       <td className="px-4 py-3 text-sm">
-                        {registro.outDate ? formatDateTime(registro.outDate) : '-'}
+                        {registro.outDate && !registro.outDate.startsWith('0001')
+                          ? formatDateTime(registro.outDate) 
+                          : '-'}
                       </td>
                       <td className="px-4 py-3">
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${estado.clase}`}>
@@ -295,7 +297,7 @@ export const Historial = () => {
               <div>
                 <p className="text-sm font-medium text-gray-500">ID de Registro</p>
                 <p className="text-lg font-semibold">
-                  {selectedRegistro.registrationId}
+                  {selectedRegistro.id}
                 </p>
               </div>
               <div>
@@ -336,20 +338,24 @@ export const Historial = () => {
               </div>
             </div>
 
-            {selectedRegistro.exitDate && (
+            {selectedRegistro.outDate && (
               <div className="grid grid-cols-2 gap-4 border-t pt-4">
                 <div>
                   <p className="text-sm font-medium text-gray-500">
                     Responsable Salida
                   </p>
                   <p className="text-gray-700">
-                    {selectedRegistro.exitUser || 'No registrado'}
+                    {selectedRegistro.outUser || 'No registrado'}
                   </p>
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500">Fecha Salida</p>
                   <p className="text-gray-700">
-                    {formatDateTime(selectedRegistro.exitDate)}
+                    {!selectedRegistro.outDate || 
+                    selectedRegistro.outDate.startsWith('0001') ||
+                    new Date(selectedRegistro.outDate).getFullYear() === 1
+                      ? "-" 
+                      : formatDateTime(selectedRegistro.outDate)}
                   </p>
                 </div>
               </div>

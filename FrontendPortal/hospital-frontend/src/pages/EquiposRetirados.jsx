@@ -197,14 +197,14 @@ export const EquiposRetirados = () => {
                     animate={{ opacity: 1 }}
                     whileHover={{ backgroundColor: '#F9FAFB' }}
                   >
-                    <td className="px-4 py-3 text-sm">{registro.registrationId}</td>
+                    <td className="px-4 py-3 text-sm">{registro.id}</td>
                     <td className="px-4 py-3 text-sm font-medium">
                       {registro.equipmentType}
                     </td>
                     <td className="px-4 py-3 text-sm">{registro.serial}</td>
                     <td className="px-4 py-3 text-sm">{registro.name}</td>
                     <td className="px-4 py-3 text-sm">
-                      {registro.exitDate
+                      {registro.outDate
                         ? formatDateTime(registro.outDate)
                         : 'Sin fecha'}
                     </td>
@@ -249,7 +249,7 @@ export const EquiposRetirados = () => {
               <div>
                 <p className="text-sm font-medium text-gray-500">ID de Registro</p>
                 <p className="text-lg font-semibold">
-                  {selectedRegistro.registrationId}
+                  {selectedRegistro.id}
                 </p>
               </div>
               <div>
@@ -289,7 +289,7 @@ export const EquiposRetirados = () => {
                   Responsable Salida
                 </p>
                 <p className="text-gray-700">
-                  {selectedRegistro.exitUser || 'No registrado'}
+                  {selectedRegistro.outUser || 'No registrado'}
                 </p>
               </div>
             </div>
